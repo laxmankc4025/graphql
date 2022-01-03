@@ -47,7 +47,7 @@ const Navbar = () => {
             component="div"
             sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
           >
-            <Link href="http://localhost:3000/">
+            <Link href="https://namgraphql.netlify.app/">
               <a>BETAVERSE</a>
             </Link>
           </Typography>
