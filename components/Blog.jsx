@@ -1,5 +1,5 @@
 import * as React from "react";
-import { styled } from "@mui/material/styles";
+// import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
@@ -8,6 +8,8 @@ import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import Link from "next/link";
 import { useQuery, gql } from "@apollo/client";
+import styled from "@emotion/styled";
+
 
 const GET_POSTS = gql`
   query GetPosts {
@@ -17,6 +19,11 @@ const GET_POSTS = gql`
       descriptions
     }
   }
+`;
+
+const Title = styled.h1`
+  text-align: center;
+  font-size: 30px;
 `;
 
 export default function Blog(posts) {
@@ -29,20 +36,20 @@ export default function Blog(posts) {
   if (error) return <p>Error :(</p>;
 
   return data.posts.map(({ id, title, descriptions }) => (
-    <div>
+    <div key={id}>
       <Paper sx={{ p: 2, margin: "auto", maxWidth: 1000, flexGrow: 1 }}>
         <Grid container spacing={2}>
           <Grid item xs={12} sm container>
             <Grid item xs container direction="column" spacing={2}>
               <Grid item xs>
-                <div key={posts.id}>
-                  <Typography gutterBottom variant="subtitle1" component="div">
-                    <Link href="#">{title}</Link>
-                  </Typography>
+                <div>
+                  <Title>
+                    <h1>
+                      <Link href="#">{title}</Link>
+                    </h1>
+                  </Title>
 
-                  <Typography variant="body2" gutterBottom>
-                    {descriptions}
-                  </Typography>
+                  <p>{descriptions}</p>
                 </div>
               </Grid>
               <Grid item>
