@@ -23,7 +23,7 @@ import Link from "next/link";
 //       {...props}
 //     >
 //       {"Copyright © "}
-//       <Link color="inherit" href="http://localhost:3000">
+//       <Link color="inherit" href="https://namgraphql.netlify.app">
 //         <a>Your Website</a>
 //       </Link>
 //       {new Date().getFullYear()}
@@ -108,7 +108,7 @@ export default function SignIn() {
                 </Link>
               </Grid>
               <Grid item>
-                <Link href="http://localhost:3000/sign-up" variant="body2">
+                <Link href="https://namgraphql.netlify.app/sign-up" variant="body2">
                   {"Don't have an account? Sign Up"}
                 </Link>
               </Grid>
