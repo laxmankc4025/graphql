@@ -94,7 +94,7 @@ const Navbar = () => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
           >
-            <Link href="http://localhost:3000/">
+            <Link href="https://namgraphql.netlify.app/">
               <a>BETAVERSE</a>
             </Link>
           </Typography>
@@ -120,12 +120,12 @@ const Navbar = () => {
 
             <Stack spacing={2} direction="row">
               <Button variant="contained" color="error">
-                <Link href="http://localhost:3000/sign-in">
+                <Link href="https://namgraphql.netlify.app/sign-in">
                   <a>SIGN IN</a>
                 </Link>
               </Button>
               <Button variant="contained" color="error">
-                <Link href="http://localhost:3000/sign-up">
+                <Link href="https://namgraphql.netlify.app/sign-up">
                   <a>SIGN UP</a>
                 </Link>
               </Button>
